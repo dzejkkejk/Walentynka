@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Cute Font' rel='stylesheet'>
+    <title>Walentynka</title>
+    
+</head>
+<body>
+    <div class="container">
+        <h1 id="ha1">Will you be my valentine?</h1>
+        <img src="misio.png" alt="Obraz Walentynkowy" id="img">
+        <div class="buttons">
+            <button id="yes">Yes</button>
+            <button id="no">No</button>
+        </div>
+    </div>
+    
+    <script>
+        const yes = document.getElementById('yes');
+        const no = document.getElementById('no');
+        const img = document.getElementById('img');
+        const ha1 = document.getElementById('ha1');
+
+        yes.addEventListener('click', () => {
+            window.location.href = 'main2.html';
+
+        });
+
+        let a = 0;
+        no.addEventListener('click', () => {
+            if (a == 0) {
+                no.textContent = 'Are you sure?';
+                no.style.height = '120px';
+                no.style.width = '120px';
+                no.style.fontSize = '35px';
+                yes.style.width = '250px';
+                yes.style.height = '250px';
+                a++;
+            } else if (a == 1) {
+                no.textContent = 'Pookie please..';
+                no.style.height = '115px';
+                no.style.width = '116px';
+                no.style.fontSize = '25px';
+                yes.style.width = '300px';
+                yes.style.height = '300px';
+                a++;
+            } else if (a == 2) {
+                no.textContent = 'Just think about it!';
+                no.style.height = '100px';
+                no.style.width = '100px';
+                no.style.fontSize = '15px';
+                yes.style.width = '350px';
+                yes.style.height = '350px';
+                a++;
+            } else if (a == 3) {
+              
+                no.style.display = 'none';
+                yes.style.width = '100vw';
+                yes.style.height = '100vh';
+                yes.style.position = 'absolute';
+                yes.style.top = '0';
+                yes.style.left = '0';
+                img.style.display = 'none';
+                ha1.style.display = 'none';
+                yes.textContent = 'Yes!';
+                a++;
+            }
+        });
+    </script>
+</body>
+</html>
