@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walentynkowa Zagadka</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <h1>ZAGADKA</h1>
+    <h2>Odgadnij hasło..</h2>
+    <h2>Na twojej walentynce są ukryte litery, które prowadzą do ukrytego hasła..</h2>
+    <form>
+        <input type="text" name="haslo" id="haslo" >
+        <button type="submit">Sprawdz czy prawidłowe :3</button>
+    </form>
+    <script>
+        const form = document.querySelector('form');
+        const input = document.getElementById('haslo');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (input.value === 'jacus kocha bardziej') {
+                window.location.href = 'main3.html';
+                input.value === 'jacus kocha bardziej'
+            } else if(input.value === 'wika kocha bardziej'){
+                alert('Chciałabyś..');
+            }else{
+                alert('Zła odpowiedź!');
+            }
+        });
+    </script>
+</body>
+</html>
