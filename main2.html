@@ -4,30 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Walentynkowa Zagadka</title>
+    <link href='https://fonts.googleapis.com/css?family=Cute Font' rel='stylesheet'>
     <link rel="stylesheet" href="style2.css">
 </head>
 <body>
     <h1>ZAGADKA</h1>
-    <h2>Odgadnij hasło..</h2>
-    <h2>Na twojej walentynce są ukryte litery, które prowadzą do ukrytego hasła..</h2>
+    <h2>Odgadnij haslo..</h2>
+    <h2>Na twojej walentynce sa ukryte litery, ktore prowadza do ukrytego hasla..</h2>
     <form>
         <input type="text" name="haslo" id="haslo" >
-        <button type="submit">Sprawdz czy prawidłowe :3</button>
+        <button type="submit">Sprawdz czy prawidlowe :3</button>
     </form>
-    <script>
-        const form = document.querySelector('form');
-        const input = document.getElementById('haslo');
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            if (input.value === 'jacus kocha bardziej') {
-                window.location.href = 'main3.html';
-                input.value === 'jacus kocha bardziej'
-            } else if(input.value === 'wika kocha bardziej'){
-                alert('Chciałabyś..');
-            }else{
-                alert('Zła odpowiedź!');
-            }
-        });
-    </script>
+    <div class="heart-icon" onclick="toggleMessages()">
+        ❤️
+    </div>
+    <div id="hidden-messages" class="hidden-messages">
+        <p>Kocham Cie!</p>
+        <p>Jestes moja Walentynka!</p>
+    </div>
+    <script src="script2.js"></script>
 </body>
 </html>
