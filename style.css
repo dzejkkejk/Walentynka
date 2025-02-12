@@ -35,7 +35,7 @@ h1 {
 img {
     max-width: 100%;
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 .buttons {
@@ -53,6 +53,7 @@ img {
     align-items: center;
     margin: 0;
     flex: 1;
+    
 }
 
 #yes {
